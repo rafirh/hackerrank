@@ -1,0 +1,29 @@
+import java.util.*;
+import java.io.*;
+
+class Solution{
+    public static void main(String []argh){
+        Scanner in = new Scanner(System.in);
+        int t = in.nextInt();
+        for(int i = 0; i < t; i++) {
+            int a = in.nextInt();
+            int b = in.nextInt();
+            int n = in.nextInt();
+            
+            for (int j = 1; j <= n; j++) {
+                int sn = a;
+                int multipler = 1;
+                
+                for (int k = 1; k <= j; k++) {
+                    sn += (multipler * b);
+                    multipler *= 2;
+                }
+                
+                System.out.print(sn + " ");
+            }
+            
+            System.out.println();
+        }
+        in.close();
+    }
+}
